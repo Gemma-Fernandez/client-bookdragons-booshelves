@@ -8,7 +8,8 @@ import BookDetails from "./components/BookDetails.jsx"
 import AuthorDetails from "./components/AuthorDetails.jsx"
 import BooksList from "./pages/BooksList"
 import AuthorsList from "./pages/AuthorsList"
-
+import NotFound from "./pages/NotFound"
+import AddBook from "./pages/AddBook"
 
 
 
@@ -26,6 +27,8 @@ function App() {
       <Route path={"/books/:bookId"} element={<BookDetails/>}/>
       <Route path={"/authors"} element={<AuthorsList/>}/>
       <Route path={"/authors/:authorId"} element={<AuthorDetails/>}/>
+      <Route path={"*"} element= {<NotFound />} />
+      <Route path={"/addBook"} element={<AddBook/>} />
      </Routes> 
      
 

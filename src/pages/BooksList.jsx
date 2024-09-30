@@ -1,12 +1,13 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
 import BookCard from "../components/BookCard"
+import {useState, useEffect} from "react"
 
 
-function BooksList() {
+function BooksList() {  
   
-    const[ allBooks, setAllBooks]=useState([])
   
+
+  const[ allBooks, setAllBooks] = useState([])
 
   useEffect(()=>{
     axios.get("http://localhost:5000/books")
@@ -18,14 +19,14 @@ function BooksList() {
         console.log(error)
 
     })
-}, []) 
+}, [])
   
   return (
     <div>
       
         {allBooks.map((eachBook)=>{
             return (
-                <BookCard allBooks={allBooks} {...eachBook}/>
+                <BookCard key={eachBook.id} allBooks={allBooks} {...eachBook}/>
                
                
             )
