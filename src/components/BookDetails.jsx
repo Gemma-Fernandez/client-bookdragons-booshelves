@@ -1,11 +1,11 @@
 import React from 'react'
 
-function Sidebar() {
+function BookDetails(props) {
   return (
     <div>
-        
+
     </div>
   )
 }
 
-export default Sidebar
+export default BookDetails

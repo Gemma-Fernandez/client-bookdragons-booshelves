@@ -37,7 +37,7 @@ function MyNavBar() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
             <Nav>
-                <Nav.Link as={Link} to="/booksList"> All books 📖</Nav.Link>
+                <Nav.Link as={Link} to="/books"> All books 📖</Nav.Link>
                 <Nav.Link as={Link} to="/authors"> Authors ✍️</Nav.Link>
                 <Nav.Link as={Link} to="/fiveStars"> Five Stars ⭐</Nav.Link>
                 <Nav.Link as={Link} to="/aboutUs"> About us 🐲</Nav.Link>
