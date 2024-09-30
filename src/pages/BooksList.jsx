@@ -26,7 +26,7 @@ function BooksList() {
       
         {allBooks.map((eachBook)=>{
             return (
-                <BookCard key={eachBook.id} allBooks={allBooks} {...eachBook}/>
+              <BookCard key={eachBook.id} allBooks={allBooks} {...eachBook}/>
                
                
             )
