@@ -11,17 +11,20 @@ import AuthorsList from "./pages/AuthorsList"
 import NotFound from "./pages/NotFound"
 import AddBook from "./pages/AddBook"
 import EditForm from "./pages/EditForm.jsx"
+import SearchBarResults from './components/SearchBarResults.jsx';
+import { useState } from 'react';
 
 
 
 
 function App() {
  
+const [searchValue, setSearchValue] = useState("")
 
   return (
    
     <>
-     <MyNavBar />
+     <MyNavBar searchValue={searchValue} setSearchValue={setSearchValue}/>
      <Routes>
       <Route path={"/"} element={<DashBoard />} />
       <Route path={"/books"} element={<BooksList/>}/>
@@ -30,7 +33,8 @@ function App() {
       <Route path={"/authors/:authorId"} element={<AuthorDetails/>}/>
       <Route path={"*"} element= {<NotFound />} />
       <Route path={"/addBook"} element={<AddBook/>} />
-      <Route path={"/books/:bookId/edit"} element={<EditForm />} />
+      <Route path={"/books/:bookId"} element={<EditForm />} />
+      <Route path={"/books/results"} element={<SearchBarResults searchValue={searchValue}/>}/>
      </Routes> 
      
     

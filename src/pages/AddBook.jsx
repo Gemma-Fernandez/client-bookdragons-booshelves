@@ -16,7 +16,7 @@ function AddBook() {
   const [genre, setGenre] = useState("");
   const [image, setImage] = useState("");
   const [summary, setSummary] = useState("");
-  const [rating, setRating] = useState(0);//! Set rating no se usa
+  const [rating, setRating] = useState(0);
   const [isASerie, setIsASerie] = useState(false);
 
   useEffect(() => {

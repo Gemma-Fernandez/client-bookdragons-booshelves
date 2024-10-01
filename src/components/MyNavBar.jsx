@@ -10,7 +10,8 @@ import InputGroup from 'react-bootstrap/InputGroup';
 
 
 
-function MyNavBar() {
+
+function MyNavBar({searchValue, setSearchValue}) {
 
   return (
     <Navbar expand="lg">
@@ -19,20 +20,19 @@ function MyNavBar() {
         <img className="logo" src={imgLogo} alt={"logo"} />
         </Navbar.Brand>
 
-        
         <Form>
-            <InputGroup>
+          <InputGroup onChange={(event) => setSearchValue(event.target.value)}>
+          <Nav.Link as={Link} to="/books/results">
             <Button type="submit">🔍</Button>
+          </Nav.Link>
+           
             <Form.Control
               placeholder="Book title, author, genre..."
               aria-label="searc"
               aria-describedby="basic-addon1"
           />
-
-            </InputGroup>
-            </Form>
-
-        
+         </InputGroup>
+        </Form>     
 
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
