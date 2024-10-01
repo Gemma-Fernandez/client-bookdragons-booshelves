@@ -1,7 +1,8 @@
 import React from 'react'
-import {useParams, useNavigate} from "react-router-dom"
+import {useParams, useNavigate, Link} from "react-router-dom"
 import {useState, useEffect} from "react"
 import axios from "axios"
+
 
 
 function BookDetails() {
@@ -24,6 +25,7 @@ function BookDetails() {
       console.log(error)
     }
   }
+
   const handleDelete = ()=> {
     axios.delete(`http://localhost:5000/books/${params.bookId}`)
     .then(()=>{
@@ -49,6 +51,11 @@ function BookDetails() {
       <p>Genre: {bookToShow.genre}</p>
       <p>Rating: {bookToShow.rating}</p>
       <p>Write your opinion: bla bla{bookToShow.review}</p>
+
+      <Link to={`/books/${params.bookId}/edit`}>
+      <button>Edit</button>
+      </Link>
+
       <button onClick={()=> setIsShowDelete(true)}>Delete</button>
       {isShowDelete && (
         <div>

@@ -10,6 +10,7 @@ import BooksList from "./pages/BooksList"
 import AuthorsList from "./pages/AuthorsList"
 import NotFound from "./pages/NotFound"
 import AddBook from "./pages/AddBook"
+import EditForm from "./pages/EditForm.jsx"
 
 
 
@@ -29,6 +30,7 @@ function App() {
       <Route path={"/authors/:authorId"} element={<AuthorDetails/>}/>
       <Route path={"*"} element= {<NotFound />} />
       <Route path={"/addBook"} element={<AddBook/>} />
+      <Route path={"/books/:bookId/edit"} element={<EditForm />} />
      </Routes> 
      
     
