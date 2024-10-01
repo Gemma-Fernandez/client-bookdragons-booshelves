@@ -2,6 +2,8 @@ import React from 'react'
 import {useState, useEffect} from "react"
 import axios from "axios";
 import Carousel from 'react-bootstrap/Carousel';
+import { Link } from 'react-router-dom';
+import AddBook from '../pages/AddBook';
 
 
 
@@ -41,7 +43,14 @@ function DashBoard() {
             )
           })}
         </Carousel>  
-    </div>
+
+        <br />
+        <br />
+          <Link to={"/addBook"}>
+          <button> add book</button>
+          </Link>
+        
+      </div>
   )
 }
 

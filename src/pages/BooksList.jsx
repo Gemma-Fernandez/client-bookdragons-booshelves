@@ -5,8 +5,6 @@ import {useState, useEffect} from "react"
 
 function BooksList() {  
   
-  
-
   const[ allBooks, setAllBooks] = useState([])
 
   useEffect(()=>{
