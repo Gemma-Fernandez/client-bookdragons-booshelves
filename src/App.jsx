@@ -29,6 +29,7 @@ const [searchValue, setSearchValue] = useState("")
   return (
    
     <>
+    <div className='appPage'>
      <MyNavBar searchValue={searchValue} setSearchValue={setSearchValue}/>
      <Routes>
       <Route path={"/"} element={<DashBoard />} />
@@ -48,7 +49,7 @@ const [searchValue, setSearchValue] = useState("")
      
     
      <Footer/>
-      
+      </div>
     </>
   )
 }

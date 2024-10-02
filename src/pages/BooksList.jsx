@@ -20,11 +20,11 @@ function BooksList() {
 }, [])
   
   return (
-    <div>
+    <div className="bookList-container">
       
         {allBooks.map((eachBook)=>{
             return (
-              <BookCard key={eachBook.id} allBooks={allBooks} {...eachBook}/>
+              <BookCard className="bookCard" key={eachBook.id} allBooks={allBooks} {...eachBook}/>
                
                
             )
