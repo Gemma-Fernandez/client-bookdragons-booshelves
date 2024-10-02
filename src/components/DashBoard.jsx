@@ -75,7 +75,10 @@ if (allBooks === null){
           <button> add book</button>
           </Link>
         
-
+          <br />
+          <Link to={"/reviews"}>
+          <button>Add Review</button>
+          </Link>
         {allReviews.map((eachReview)=>{
           return (
           <ReviewComponent allReviews={allReviews} {...eachReview}/>

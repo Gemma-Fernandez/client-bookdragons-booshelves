@@ -72,7 +72,7 @@ function EditForm() {
   
   return (
     <div>
-    <h3>Add a new interesting book!</h3>
+    <h3>Edit book!</h3>
 
     <form onSubmit={handleSubmit}>
       <FloatingLabel controlId="floatingTextarea" label="Title" className="mb-3"> 
@@ -135,7 +135,7 @@ function EditForm() {
       <Form.Control 
         as="textarea"
         type="text"
-        placeholder="Leave a comment here"
+        placeholder="What's the book about"
         value={summary}
         onChange={(event) => setSummary(event.target.value)}
         style={{height: '100px'}}

@@ -71,7 +71,7 @@ function BookDetails() {
       <p>Rating: {starEmojis}</p>
       {/*<p>Write your opinion: bla bla{bookToShow.review}</p>*/}
 
-      <Link to={`/books/${params.bookId}/edit`}>
+      <Link to={`/books/${params.bookId}/editBook`}>
       <button>Edit</button>
       </Link>
 

@@ -37,6 +37,9 @@ function AuthorDetails() {
         <img src={authorToShow.image} style={{width:"200px"}}/>
         <p>Location: {authorToShow.location}</p>
         <p>Description: {authorToShow.description}</p>
+        <Link to={`/authors/${params.authorId}/editAuthor`}>
+      <button>Edit</button>
+      </Link>
         <p>Libros escritos por el autor: </p>
         {authorToShow.books.map((eachBook)=>{
           return(
