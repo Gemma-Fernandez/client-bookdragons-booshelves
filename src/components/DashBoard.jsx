@@ -3,7 +3,7 @@ import {useState, useEffect} from "react"
 import axios from "axios";
 import Carousel from 'react-bootstrap/Carousel';
 import { Link } from 'react-router-dom';
-import AddBook from '../pages/AddBook';
+
 
 
 
@@ -38,7 +38,9 @@ function DashBoard() {
           .map((eachBook)=>{
             return(
               <Carousel.Item>
+                <Link to={`/books/${eachBook.id}`}>
                 <img src={eachBook.image} alt="cover" style={{width:"200px"}}/>
+                </Link>
               </Carousel.Item>
             )
           })}
