@@ -2,6 +2,7 @@ import {useEffect, useState} from "react"
 import axios from "axios"
 import BookCard from "./BookCard"
 import { Link, useParams } from "react-router-dom"
+import Spinner from 'react-bootstrap/Spinner'
 
 function SearchBarResults({searchValue}) {
 
@@ -22,6 +23,9 @@ const getData= async ()=> {
   } catch (error) {
     console.log(error)
   }
+};
+if (allBooks === null){
+  return <Spinner animation="grow" />;
 }
 
   return (

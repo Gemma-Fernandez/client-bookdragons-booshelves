@@ -1,6 +1,7 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
 import {useParams, Link} from "react-router-dom"
+import Spinner from 'react-bootstrap/Spinner';
 
 
 
@@ -23,7 +24,7 @@ function AuthorDetails() {
     }
   }
   if (authorToShow === null){
-    return (<h3>... loading</h3>)
+    return <Spinner animation="grow" />;
   }
 
 

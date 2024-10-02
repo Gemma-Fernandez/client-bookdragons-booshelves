@@ -2,6 +2,10 @@ import React from 'react'
 import {useParams, useNavigate, Link} from "react-router-dom"
 import {useState, useEffect} from "react"
 import axios from "axios"
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+import Collapse from 'react-bootstrap/Collapse'
+import Spinner from 'react-bootstrap/Spinner';
 
 
 
@@ -37,7 +41,7 @@ function BookDetails() {
   };
 
   if (bookToShow === null){
-    return (<h3>... loading</h3>)
+    return <Spinner animation="grow" />;
   }
 
   let starEmojis;
@@ -71,12 +75,18 @@ function BookDetails() {
       <button>Edit</button>
       </Link>
 
-      <button onClick={()=> setIsShowDelete(true)}>Delete</button>
+      <Button onClick={()=> setIsShowDelete(!isShowDelete)} aria-controls="example-collapse-text" aria-expanded={isShowDelete}>Delete</Button>
       {isShowDelete && (
-        <div>
-          <p>Are you sure you want to <strong>delete </strong> the book? </p>
-          <button onClick={handleDelete}>Yes</button>
-          <button onClick={()=> setIsShowDelete(false)}>No</button>
+        <div >
+          <Collapse in={isShowDelete} dimension="width">
+            <div id="example-collapse-text">
+              <Card body style={{ width: '400px' }}>
+              <p>Are you sure you want to <strong>delete </strong> the book? </p>
+              <button onClick={handleDelete}>Yes</button>
+              <button onClick={()=> setIsShowDelete(false)}>No</button>
+            </Card>
+            </div>
+        </Collapse>
         </div>
       )}
     </div>

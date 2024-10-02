@@ -2,6 +2,7 @@ import React from 'react'
 import {useState, useEffect} from "react"
 import axios from "axios";
 import BookCard from "../components/BookCard"
+import Spinner from 'react-bootstrap/Spinner'
 
 function FiveStars() {
   const[ allBooks, setAllBooks] = useState([])
@@ -17,6 +18,11 @@ function FiveStars() {
 
     })
 }, [])
+
+if (allBooks === null) {
+  return <Spinner animation="grow" />;
+}
+
   return (
     <div>
       {allBooks.filter((eachBook)=>{

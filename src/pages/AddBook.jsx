@@ -3,6 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
+import Spinner from 'react-bootstrap/Spinner';
 
 function AddBook() {
   const [allBooks, setAllBooks] = useState(null);
@@ -49,7 +50,7 @@ function AddBook() {
       pages: Number(pages),
       published: Number(published),
       genre,
-      rating,
+      rating: Number(rating),
       isASerie,
     };
     
@@ -80,7 +81,7 @@ function AddBook() {
 
 
   if (allBooks === null) {
-    return <h3>... loading</h3>;
+    return <Spinner animation="grow" />;
   }
 
     return (
