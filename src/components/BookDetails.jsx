@@ -19,7 +19,7 @@ function BookDetails() {
 
   const getData= async ()=> {
     try {
-      const response = await axios.get(`http://localhost:5000/books/${params.bookId}`)
+      const response = await axios.get(`${import.meta.env.VITE_SERVER_URL}/books/${params.bookId}`)
       setBookToShow(response.data)
     } catch (error) {
       console.log(error)
@@ -27,7 +27,7 @@ function BookDetails() {
   }
 
   const handleDelete = ()=> {
-    axios.delete(`http://localhost:5000/books/${params.bookId}`)
+    axios.delete(`${import.meta.env.VITE_SERVER_URL}/books/${params.bookId}`)
     .then(()=>{
       navigate("/books")
     })

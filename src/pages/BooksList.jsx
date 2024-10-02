@@ -8,7 +8,7 @@ function BooksList() {
   const[ allBooks, setAllBooks] = useState([])
 
   useEffect(()=>{
-    axios.get("http://localhost:5000/books")
+    axios.get(`${import.meta.env.VITE_SERVER_URL}/books`)
     .then ((response) =>{
         
         setAllBooks(response.data)

@@ -23,7 +23,7 @@ function EditForm() {
   const [isASerie, setIsASerie] = useState(false);
 
   useEffect (()=>{
-    axios.get(`http://localhost:5000/books/${params.bookId}`)
+    axios.get(`${import.meta.env.VITE_SERVER_URL}/books/${params.bookId}`)
     .then((response)=> {
       setTitle(response.data.title)
       setAuthor(response.data.author)
@@ -58,7 +58,7 @@ function EditForm() {
     };
     
     try{
-       await axios.put(`http://localhost:5000/books/${params.bookId}`, editBook)
+       await axios.put(`${import.meta.env.VITE_SERVER_URL}/books/${params.bookId}`, editBook)
         
 
         navigate(`/books/${params.bookId}`)

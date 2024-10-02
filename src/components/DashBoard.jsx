@@ -13,7 +13,7 @@ function DashBoard() {
   const[ allBooks, setAllBooks] = useState([])
 
   useEffect(()=>{
-    axios.get("http://localhost:5000/books?limit=5")
+    axios.get(`${import.meta.env.VITE_SERVER_URL}/books?limit=5`)
     .then ((response) =>{
         
         setAllBooks(response.data)
@@ -28,7 +28,7 @@ function DashBoard() {
 
   return (
     <div>
-      
+        <h3>Five books with five stars</h3>
         <Carousel data-bs-theme="dark">
           {allBooks.filter((eachBook)=>{
             if(eachBook.rating === 5){

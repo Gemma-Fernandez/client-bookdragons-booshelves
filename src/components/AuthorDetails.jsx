@@ -15,7 +15,7 @@ function AuthorDetails() {
 
   const getData = async ()=>{
     try{
-      const response = await axios.get(`http://localhost:5000/authors/${params.authorId}`)
+      const response = await axios.get(`${import.meta.env.VITE_SERVER_URL}/authors/${params.authorId}`)
       setAuthorToShow(response.data)
     }catch (error){
       console.log(error)

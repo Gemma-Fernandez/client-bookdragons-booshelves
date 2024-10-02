@@ -21,7 +21,7 @@ function AddBook() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/books")
+      .get(`${import.meta.env.VITE_SERVER_URL}/books`)
       .then((response) => {
         setAllBooks(response.data);
       })
@@ -47,7 +47,7 @@ function AddBook() {
     };
     
     try{
-      const response= await axios.post(`http://localhost:5000/books`, newBook)
+      const response= await axios.post(`${import.meta.env.VITE_SERVER_URL}/books`, newBook)
         setAllBooks(response)
 
         navigate("/books")

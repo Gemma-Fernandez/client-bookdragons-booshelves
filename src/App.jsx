@@ -12,6 +12,8 @@ import NotFound from "./pages/NotFound"
 import AddBook from "./pages/AddBook"
 import EditForm from "./pages/EditForm.jsx"
 import SearchBarResults from './components/SearchBarResults.jsx';
+import AboutUs from "./pages/AboutUs"
+import FiveStars from "./pages/FiveStars"
 import { useState } from 'react';
 
 
@@ -35,6 +37,8 @@ const [searchValue, setSearchValue] = useState("")
       <Route path={"/addBook"} element={<AddBook/>} />
       <Route path={"/books/:bookId"} element={<EditForm />} />
       <Route path={"/books/results"} element={<SearchBarResults searchValue={searchValue}/>}/>
+      <Route path={"/aboutUs"} element={<AboutUs/>} />
+      <Route path={"/fiveStars"} element={<FiveStars/>} />
      </Routes> 
      
     

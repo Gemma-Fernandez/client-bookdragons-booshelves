@@ -7,7 +7,7 @@ function AuthorsList() {
   const [allAuthors, setAllAuthors] = useState([])
   
   useEffect(() => {
-    axios.get("http://localhost:5000/authors")
+    axios.get(`${import.meta.env.VITE_SERVER_URL}/authors`)
     .then ((response) =>{
       
       setAllAuthors(response.data)
