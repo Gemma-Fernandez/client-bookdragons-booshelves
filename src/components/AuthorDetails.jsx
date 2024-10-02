@@ -1,6 +1,7 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
-import {useParams} from "react-router-dom"
+import {useParams, Link} from "react-router-dom"
+
 
 
 function AuthorDetails() {
@@ -15,7 +16,7 @@ function AuthorDetails() {
 
   const getData = async ()=>{
     try{
-      const response = await axios.get(`${import.meta.env.VITE_SERVER_URL}/authors/${params.authorId}`)
+      const response = await axios.get(`${import.meta.env.VITE_SERVER_URL}/authors/${params.authorId}?_embed=books`)
       setAuthorToShow(response.data)
     }catch (error){
       console.log(error)
@@ -35,7 +36,16 @@ function AuthorDetails() {
         <img src={authorToShow.image} style={{width:"200px"}}/>
         <p>Location: {authorToShow.location}</p>
         <p>Description: {authorToShow.description}</p>
-        <p>Libros escritos por el autor</p>
+        <p>Libros escritos por el autor: </p>
+        {authorToShow.books.map((eachBook)=>{
+          return(
+            <div>
+              <Link to={`/books/${eachBook.id}`}>
+            <img src={eachBook.image} style={{width:"150px"}}/>
+            </Link>
+            </div>
+          )
+        })}
       </div>
 
 

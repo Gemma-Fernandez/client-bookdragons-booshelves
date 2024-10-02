@@ -44,7 +44,9 @@ function BookDetails() {
     <div className="book-details">
       <h2>{bookToShow.title}</h2>
       <img src={bookToShow.image} style={{width:"200px"}}/>
+      <Link to={`/authors/${bookToShow.authorId}`}>
       <p>Author: {bookToShow.author}</p>
+      </Link>
       <p>"{bookToShow.summary}"</p>
       <p>Pages: {bookToShow.pages}</p>
       <p>Published: {bookToShow.published}</p>
