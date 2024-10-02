@@ -4,6 +4,7 @@ import axios from "axios";
 import Carousel from 'react-bootstrap/Carousel';
 import { Link } from 'react-router-dom';
 import Spinner from 'react-bootstrap/Spinner'
+import ReviewComponent from "./ReviewComponent"
 
 
 
@@ -12,7 +13,7 @@ import Spinner from 'react-bootstrap/Spinner'
 function DashBoard() {
 
   const[ allBooks, setAllBooks] = useState([])
-
+  const [ allReviews, setAllReviews] = useState ([])
   useEffect(()=>{
     axios.get(`${import.meta.env.VITE_SERVER_URL}/books?limit=5`)
     .then ((response) =>{
@@ -23,6 +24,18 @@ function DashBoard() {
         console.log(error)
 
     })
+
+    //llamando a las reviews de los libros
+    axios.get(`${import.meta.env.VITE_SERVER_URL}/reviews`)
+    .then ((response) =>{
+        
+      setAllReviews(response.data)
+  })
+  .catch ((error) =>{
+      console.log(error)
+
+  })
+
 }, [])
 
 if (allBooks === null){
@@ -62,6 +75,13 @@ if (allBooks === null){
           <button> add book</button>
           </Link>
         
+
+        {allReviews.map((eachReview)=>{
+          return (
+          <ReviewComponent allReviews={allReviews} {...eachReview}/>
+          )
+        })}  
+
       </div>
   )
 }
