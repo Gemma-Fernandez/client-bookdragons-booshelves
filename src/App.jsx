@@ -35,7 +35,7 @@ const [searchValue, setSearchValue] = useState("")
       <Route path={"/authors/:authorId"} element={<AuthorDetails/>}/>
       <Route path={"*"} element= {<NotFound />} />
       <Route path={"/addBook"} element={<AddBook/>} />
-      <Route path={"/books/:bookId"} element={<EditForm />} />
+      <Route path={"/books/:bookId/edit"} element={<EditForm />} />
       <Route path={"/books/results"} element={<SearchBarResults searchValue={searchValue}/>}/>
       <Route path={"/aboutUs"} element={<AboutUs/>} />
       <Route path={"/fiveStars"} element={<FiveStars/>} />

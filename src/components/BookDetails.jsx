@@ -40,6 +40,19 @@ function BookDetails() {
     return (<h3>... loading</h3>)
   }
 
+  let starEmojis;
+  if (bookToShow.rating === 1){
+    starEmojis = "⭐"
+  } else  if (bookToShow.rating === 2){
+    starEmojis = "⭐⭐"
+  }else  if (bookToShow.rating === 3){
+    starEmojis = "⭐⭐⭐"
+  }else  if (bookToShow.rating === 4){
+    starEmojis = "⭐⭐⭐⭐"
+  }else  if (bookToShow.rating === 5){
+    starEmojis = "⭐⭐⭐⭐⭐"
+  }
+
   return (
     <div className="book-details">
       <h2>{bookToShow.title}</h2>
@@ -51,8 +64,8 @@ function BookDetails() {
       <p>Pages: {bookToShow.pages}</p>
       <p>Published: {bookToShow.published}</p>
       <p>Genre: {bookToShow.genre}</p>
-      <p>Rating: {bookToShow.rating}</p>
-      <p>Write your opinion: bla bla{bookToShow.review}</p>
+      <p>Rating: {starEmojis}</p>
+      {/*<p>Write your opinion: bla bla{bookToShow.review}</p>*/}
 
       <Link to={`/books/${params.bookId}/edit`}>
       <button>Edit</button>

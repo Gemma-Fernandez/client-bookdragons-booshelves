@@ -19,6 +19,13 @@ function AddBook() {
   const [rating, setRating] = useState(0);
   const [isASerie, setIsASerie] = useState(false);
 
+  const [fullName, setFullName] = useState("")
+  const [location, setLocation ] = useState("");
+  const [description, setDescription] = useState("");
+  const [picture, setPicture] = useState("");
+  
+
+
   useEffect(() => {
     axios
       .get(`${import.meta.env.VITE_SERVER_URL}/books`)
@@ -46,9 +53,23 @@ function AddBook() {
       isASerie,
     };
     
+    const newAuthor ={
+      fullName,
+      location,
+      description,
+      image
+    }
+
     try{
-      const response= await axios.post(`${import.meta.env.VITE_SERVER_URL}/books`, newBook)
-        setAllBooks(response)
+      
+      const authorResponse= await axios.post(`${import.meta.env.VITE_SERVER_URL}/authors`, newAuthor)
+      const authorName= authorResponse.data.fullName
+      const authorId = authorResponse.data.id
+
+      const newBookWithAutor= {...newBook, author: authorName, authorId: authorId}
+      
+      const bookResponse= await axios.post(`${import.meta.env.VITE_SERVER_URL}/books`, newBookWithAutor)
+        setAllBooks(bookResponse)
 
         navigate("/books")
         
@@ -81,8 +102,8 @@ function AddBook() {
           <Form.Control
             placeholder="Author"
             type="text"
-            value={author}
-            onChange={(event) => setAuthor(event.target.value)}
+            value={fullName}
+            onChange={(event) => setFullName(event.target.value)}
             />
                </FloatingLabel>
 
