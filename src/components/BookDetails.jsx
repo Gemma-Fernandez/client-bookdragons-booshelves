@@ -2,9 +2,6 @@ import React from 'react'
 import {useParams, useNavigate, Link} from "react-router-dom"
 import {useState, useEffect} from "react"
 import axios from "axios"
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
-import Collapse from 'react-bootstrap/Collapse'
 import Spinner from 'react-bootstrap/Spinner';
 
 
@@ -60,36 +57,46 @@ function BookDetails() {
 
   return (
     <div className="book-details">
-      <h2>{bookToShow.title}</h2>
-      <img src={bookToShow.image} style={{width:"200px"}}/>
-      <Link to={`/authors/${bookToShow.author.id}`}>
-      <p>Author: {bookToShow.author.fullName}</p>
-      </Link>
-      <p>"{bookToShow.summary}"</p>
-      <p>Pages: {bookToShow.pages}</p>
-      <p>Published: {bookToShow.published}</p>
-      <p>Genre: {bookToShow.genre}</p>
-      <p>Rating: {starEmojis}</p>
-      {/*<p>Write your opinion: bla bla{bookToShow.review}</p>*/}
+      <h3>Book details</h3>
 
-      <Link to={`/books/${params.bookId}/editBook`}>
-      <button>Edit</button>
-      </Link>
+      
+      <div className='book-info'>
+        <img src={bookToShow.image} style={{width:"200px"}}/>
 
-      <Button onClick={()=> setIsShowDelete(!isShowDelete)} aria-controls="example-collapse-text" aria-expanded={isShowDelete}>Delete</Button>
-      {isShowDelete && (
-        <div >
-          <Collapse in={isShowDelete} dimension="width">
-            <div id="example-collapse-text">
-              <Card body style={{ width: '400px' }}>
-              <p>Are you sure you want to <strong>delete </strong> the book? </p>
-              <button onClick={handleDelete}>Yes</button>
-              <button onClick={()=> setIsShowDelete(false)}>No</button>
-            </Card>
-            </div>
-        </Collapse>
+        <div className='book-info-text'>
+          <h2>{bookToShow.title}</h2>
+          <Link to={`/authors/${bookToShow.author.id}`}>
+          <p>Author: {bookToShow.author.fullName}</p>
+          </Link>
+          <p>Pages: {bookToShow.pages}</p>
+          <p>Published: {bookToShow.published}</p>
+          <p>Genre: {bookToShow.genre}</p>
+          <p>Rating: {starEmojis}</p>
         </div>
+        
+      </div>
+
+      <div className='book-summary'>
+        <p>"{bookToShow.summary}"</p>
+     </div>
+      {/*<p>Write your opinion: bla bla{bookToShow.review}</p>*/}
+    <div className="dosBtn">
+      <Link to={`/books/${params.bookId}/editBook`}>
+      <button className='btn-authorD'>Edit</button>
+      </Link>
+
+      <button onClick={()=> setIsShowDelete(true)} className='btn-delete'>Delete</button>
+      {isShowDelete && (
+                  
+            <div className='book-confirm-delete'>
+              <p >Are you sure you want to <strong>delete </strong> the book? </p>
+              <button className='btn-authorD' onClick={handleDelete}>Yes</button>
+              <button className='btn-authorD' onClick={()=> setIsShowDelete(false)}>No</button>
+            
+            </div>
+       
       )}
+        </div>
     </div>
   )
 }

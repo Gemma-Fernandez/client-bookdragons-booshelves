@@ -51,7 +51,7 @@ function AddReview() {
   return (
     <div>
       
-     <form onSubmit={handleSubmit}>
+     <form onSubmit={handleSubmit} className="form">
       <FloatingLabel controlId="floatingTextarea" label="Username" className="mb-3"> 
         <Form.Control
           placeholder="Username"
@@ -99,7 +99,7 @@ function AddReview() {
             />
       </FloatingLabel>
 
-        <button onClick={handleSubmit} type="submit">Post!</button>
+        <button onClick={handleSubmit} className='btn-authorD' type="submit">Post!</button>
         </form>
 
 

@@ -53,7 +53,7 @@ function EditAuthor() {
   return (
     <div>
          <h3>Edit the Author!</h3>
-         <form onSubmit={handleSubmit}>
+         <form onSubmit={handleSubmit} className="form">
       <FloatingLabel controlId="floatingTextarea" label="FullName" className="mb-3"> 
 
       <Form.Control
@@ -92,8 +92,8 @@ function EditAuthor() {
         style={{height: '100px'}}
         />
         </FloatingLabel>
+      <button onClick={handleSubmit} type="submit" className="btn-authorD">Edit</button>
       </form>
-      <button onClick={handleSubmit} type="submit">Add Author</button>
     </div>
   )
 }

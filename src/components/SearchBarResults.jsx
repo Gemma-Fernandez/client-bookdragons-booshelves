@@ -30,7 +30,9 @@ if (allBooks === null){
 
   return (
     <div>
-      <h2>Search Results</h2>
+      <h3>Search Results</h3>
+
+      <div className="bookList-container">
       {allBooks
       .filter((eachBook)=>{
         return eachBook.title.toLowerCase().includes(searchValue.toLowerCase()) ||
@@ -39,10 +41,10 @@ if (allBooks === null){
       })
       .map((eachBook =>{
         return (
-          <div>
+          <div className="bookCard-container">
           <Link to={`/books/${eachBook.id}`}>
-          <img src={eachBook.image} style={{width:"200px"}}/>
-          <h3>{eachBook.title}</h3>
+          <img src={eachBook.image} style={{width:"200px", borderRadius:"20px", boxShadow: "5px 5px 15px 5px #00000095", marginBottom: "25px"}}/>
+          <h4>{eachBook.title}</h4>
           </Link>
 
           <Link to={`/authors/${eachBook.id}`}>
@@ -52,6 +54,7 @@ if (allBooks === null){
           </div>
         )
       }))}
+      </div>
 
     </div>
   )

@@ -88,7 +88,7 @@ function AddBook() {
       <div>
         <h3>Add a new interesting book!</h3>
 
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="form">
           <FloatingLabel controlId="floatingTextarea" label="Title" className="mb-3"> 
 
           <Form.Control

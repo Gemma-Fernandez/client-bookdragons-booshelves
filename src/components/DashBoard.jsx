@@ -7,9 +7,6 @@ import Spinner from 'react-bootstrap/Spinner'
 import ReviewComponent from "./ReviewComponent"
 
 
-
-
-
 function DashBoard() {
 
   const[ allBooks, setAllBooks] = useState([])
@@ -45,13 +42,14 @@ if (allBooks === null){
   return (
     <div>
       <section className="intro">
-        <p>Welcome to a bookdragon's bookshelves!! Here you can find some of our favorite books and some that are on our TBR, but pleaese, be our guest and add more!! Like every dragon, we like to hoard our treasures!</p>
+        <p>Welcome to a bookdragon's bookshelves!! 🐲 </p>
+        <p>Here you can find some of our favorite books and some that are on our TBR, but pleaese, be our guest and add more!!</p>
+        <p> Like every dragon, we like to hoard our treasures! 📚</p>
       </section>
 
-
-
         <h3>Five books with five stars</h3>
-        <Carousel data-bs-theme="dark">
+      <section className="carousel">
+        <Carousel data-bs-theme="light">
           {allBooks.filter((eachBook)=>{
             if(eachBook.rating === 5){
               return true
@@ -67,18 +65,16 @@ if (allBooks === null){
             )
           })}
         </Carousel>  
-
-        <br />
-        <br />
-          <h4>Add a new book</h4>
-          <Link to={"/addBook"}>
-          <button> add book</button>
-          </Link>
-        
-          <br />
-          <Link to={"/reviews"}>
-          <button>Add Review</button>
-          </Link>
+      </section>
+      <section className="dashboard-btns">
+            <Link to={"/addBook"}>
+              <button> Add a book 📖</button>
+            </Link>
+            <Link to={"/reviews"}>
+              <button>Post a Review ✨</button>
+            </Link>
+      </section>
+          <h3>Reviews</h3>
         {allReviews.map((eachReview)=>{
           return (
           <ReviewComponent allReviews={allReviews} {...eachReview}/>

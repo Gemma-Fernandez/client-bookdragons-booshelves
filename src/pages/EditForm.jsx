@@ -74,7 +74,7 @@ function EditForm() {
     <div>
     <h3>Edit book!</h3>
 
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="form">
       <FloatingLabel controlId="floatingTextarea" label="Title" className="mb-3"> 
 
       <Form.Control
@@ -166,7 +166,7 @@ function EditForm() {
         </Form.Select>
       </FloatingLabel>  
   
-      <button onClick={handleSubmit} type="submit">Add Book 📚</button>
+      <button className='btn-authorD' onClick={handleSubmit} type="submit">Add Book 📚</button>
     </form>
   </div>
   )

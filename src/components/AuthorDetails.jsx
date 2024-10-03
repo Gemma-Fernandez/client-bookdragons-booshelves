@@ -30,26 +30,30 @@ function AuthorDetails() {
 
 
   return (
-    <div>
-      <h3>Detalles del autor</h3>
-      <div>
+    <div >
+      <h3>Author details</h3>
+      <div className="carticasAuthor">
         <h4>{authorToShow.fullName}</h4>
         <img src={authorToShow.image} style={{width:"200px"}}/>
-        <p>Location: {authorToShow.location}</p>
-        <p>Description: {authorToShow.description}</p>
-        <Link to={`/authors/${params.authorId}/editAuthor`}>
-      <button>Edit</button>
-      </Link>
-        <p>Libros escritos por el autor: </p>
+        <p> {authorToShow.location}</p>
+        <p className="authorDes">{authorToShow.description}</p>
+        <h4>Books written by the author: </h4>
+        <div className="imagesBA">
         {authorToShow.books.map((eachBook)=>{
           return(
-            <div>
+            <div >
               <Link to={`/books/${eachBook.id}`}>
-            <img src={eachBook.image} style={{width:"150px"}}/>
+            <img  src={eachBook.image} style={{width:"150px", margin: "8px"}}/>
             </Link>
             </div>
           )
         })}
+        </div>
+      </div>
+      <div className="edit-author-btn">
+        <Link to={`/authors/${params.authorId}/editAuthor`}>
+          <button className="btn-authorD" >Edit Author</button>
+         </Link>
       </div>
 
 

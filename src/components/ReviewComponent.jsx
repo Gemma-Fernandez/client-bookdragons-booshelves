@@ -8,12 +8,12 @@ function ReviewComponent(props) {
 const[progress, setProgress]= useState(Math.floor((props.progress/props.bookPages)*100))
 
   return (
-    <div>
-        <p>{props.userName}</p>
-        <p>{props.bookTitle}</p>
-        <p>{props.comment}</p>
-        <p>My progress:</p>
-        <p><ProgressBar now={progress} label={`${progress}%`} /></p>
+    <div className="review">
+        <p>USERNAME:  {props.userName}</p>
+        <p>TITLE:  {props.bookTitle}</p>
+        <p>REVIEW:  {props.comment}</p>
+        <p>PROGRESS: <ProgressBar striped variant="success" animated now={progress} label={`${progress}%`} /></p>
+        
     </div>
   )
 }

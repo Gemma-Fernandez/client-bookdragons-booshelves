@@ -24,7 +24,7 @@ if (allBooks === null) {
 }
 
   return (
-    <div>
+    <div className="bookList-container" >
       {allBooks.filter((eachBook)=>{
             if(eachBook.rating === 5){
               return true

@@ -12,38 +12,27 @@
   text-align: justify;
   min-height: 100vh;
   font-family: "Handlee", cursive;
+  color: rgb(117, 117, 117);
 }
 
+
+    /*---- movile ----*/
+.logo {
+  width: 70px;
+}
 
 .logo:hover {
   filter: drop-shadow(0 0 2em #c46732d3);
   transition: 0.5s;
 }
 
-
 /*------ NAVBAR -----------------------------*/
 .custom-navbar{
-
   padding: 10px;
   display: flex;
   align-items: center;
   align-content: space-between;
-  
-}
-
-    /*---- movile ----*/
-@media (max-width: 400px){
-  .logo {
-    width: 50px;
-
-  }
-  .container{
-    border: 5px solid black;
-    
-  }
-  .navbar-form{
-    margin-right: 4px ;
-  } 
+  /* flex-wrap: nowrap !important; */
 }
 
 #basic-navbar-nav{
@@ -51,27 +40,118 @@
 }
 
 #enlacesNav:hover{
-color: #A84F3C;
-font-size: 18px;
-filter: drop-shadow(0 0 2em #c46732d3);
-transition: 0.5s;
+  /* color: rgb(148, 145, 145) ; */
+  background-color:  rgba(148, 145, 145, 0.521);
+  border-radius: 20px;
+  font-size: 18px;
+  filter: drop-shadow(0 0 2em rgba(122, 119, 119, 0.806));
+  transition: 0.4s;
+}
+
+h3{
+  font-family: 'Fredericka the Great';
+  text-align: center;
+  font-size: 35px !important;
+  color: white !important;
+  
+}
+
+.intro{
+  margin: 20px;
+  color: rgb(117, 117, 117);
+  border: 1px solid rgba(255, 255, 255, 0.575);
+  padding: 15px;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.575);
+}
+
+.intro p{
+  margin: 0px;
+}
+
+.carousel{
+  display: flex;
+  justify-content: center;
+  margin: 15px;
+}
+
+.dashboard-btns{
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dashboard-btns a button{
+  margin: 5px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  color:white;
+  padding:10px;
+  border: 1px solid #EADDCA;
+  border-radius: 20px;
+}
+
+.dashboard-btns a button:hover{
+  border-bottom: 3px solid #EADDCA;
+  border-top: 2px solid #EADDCA;
+  border-radius: 20px;
+  }
+
+.review{
+  margin: 20px;
+  color: rgb(255, 255, 255);
+  border: 1px solid rgba(255, 255, 255, 0.575);
+  padding: 35px;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.322);
+}
+
+.review p{
+  border-bottom: 2px solid rgba(128, 128, 128, 0.473);
+}
+
+.notFound-container{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+.notFound-container img{
+  width: 350px;
+  margin:15px;
+  border-radius: 30px;
+  box-shadow: 5px 5px 15px 5px #00000075
+}
+
+.notFound-container button{
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  color:white;
+  
+}
+.notFound-container button:hover{
+  box-shadow: 5px 5px 15px 5px #fffcfc75;
+border-radius:50%;
+}
+
+.notFound-container button img{
+  width: 70px;
+}
+
+.read-the-docs {
+  color: #f0ebeb;
 }
 
 
 /*------- BOOKLIST -------------------------*/
-/* .logo{
-/*   width: 200px;
-} */ */
 
 .card {
   padding: 2em;
 }
-
-.read-the-docs {
-  color: #888;
-}
-
-
 
 .bookList-container{
   display: flex;
@@ -80,7 +160,6 @@ transition: 0.5s;
   justify-content: center;
   padding: 20px;
 }
-
 
 .bookCard-container{
   margin: 5px;
@@ -119,10 +198,6 @@ transition: 0.5s;
   font-size: 1.5rem;
 }
 
-.bookCard-info p span{
-  color: black
-}
-
 .authorList-container{
   display:flex;
   flex-direction: row;
@@ -131,7 +206,7 @@ transition: 0.5s;
 }
 .authorCard-container{
   margin: 8px;
-  width: 250px;
+  width: 300px;
   border-radius: 20px;
   padding: 15px;
   text-align: center;
@@ -150,8 +225,8 @@ transition: 0.5s;
   border-radius: 10px;
   margin: 7px;
   box-shadow: 5px 5px 15px 5px #00000075;
-  width: 150px;
-  height: 200px;
+  width: 250px;
+  height: 300px;
   object-fit: cover;
   
 }
@@ -161,11 +236,167 @@ transition: 0.5s;
   color:white;
 }
 
-
 .footer{
   display:flex;
   position: relative;
   justify-content: flex-end;
   top: 230px;
   font-family:"Fredericka the Great", system-ui
+}
+
+.aboutUs{
+ background-color:rgba(255, 255, 255, 0.575);
+ padding: 20px;
+ margin: 10px;
+ border-radius: 20px;
+ text-align: center;
+}
+
+.aboutUs p{
+  text-align: justify;
+}
+
+.aboutUs img{
+  border-radius: 50%;
+  width: 275px;
+
+}
+
+.links{
+  display: flex;
+  justify-content: space-between;
+}
+.carticasAuthor{
+ background-color:rgba(255, 255, 255, 0.575);
+ padding: 20px;
+ margin: 10px;
+ border-radius: 20px;
+ text-align: center;
+ color:(117, 117, 117);
+}
+
+.carticasAuthor img{
+  margin-bottom: 15px;
+  border-radius: 20px;
+}
+
+.btn-authorD{
+  margin: 5px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  color:#f9ecd7;
+  padding:10px;
+  border: 2px solid #f9ecd7;
+  border-radius: 20px;
+}
+.authorDes{
+  text-align: justify;
+}
+
+
+.btn-authorD:hover{
+  border-bottom: 4px solid #f8ecd9;
+  border-top: 4px solid #f8ecd9;
+  border-radius: 20px;
+}
+
+.imagesBA{
+  margin: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  }
+
+  .edit-author-btn{
+    display: flex;
+    justify-content: center;
+  }
+
+/*----- BOOK DETAILS --------------*/
+
+.btn-delete{
+  width:70px;
+  height: 45px;
+  margin: 5px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  color:#f9ecd7;
+  padding:10px;
+  border: 2px solid #f9ecd7;
+  border-radius: 20px;
+}
+
+.dosBtn{
+  display: flex;
+ justify-content: center;
+
+}
+
+.book-details{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.book-details a{
+  text-decoration: none;
+  color: rgb(117, 117, 117);
+}
+
+
+.book-details h2{
+  margin-bottom: 15px;
+}
+
+.book-info{
+  display: flex;
+  margin: 20px;
+  gap: 10px;
+  justify-content: center;
+}
+
+.book-info img{
+  border-radius: 20px;
+  box-shadow: 5px 5px 15px 5px #00000095;
+  width: 200px;
+}
+
+.book-info-text{
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color:rgba(255, 255, 255, 0.575);
+  border-radius: 20px;
+  color: rgb(117, 117, 117);
+  ;
+}
+
+.book-summary{
+  background-color:rgba(255, 255, 255, 0.575);
+  border-radius: 20px;
+  color: rgb(117, 117, 117);
+  padding: 20px;
+  margin: 20px;
+}
+
+.book-confirm-delete{
+  background-color:rgba(255, 255, 255, 0.575);
+  border-radius: 20px;
+  color: rgb(117, 117, 117);
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
+  width: 200;
+}
+
+/*---- FORMS ----------*/
+
+.form{
+  margin: 20px;
+  text-align: center;
 }
