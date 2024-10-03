@@ -244,12 +244,17 @@ border-radius:50%;
   font-family:"Fredericka the Great", system-ui
 }
 
+
+/*----- ABOUT US -------------*/
 .aboutUs{
+  width: 550px;
  background-color:rgba(255, 255, 255, 0.575);
  padding: 20px;
  margin: 10px;
  border-radius: 20px;
  text-align: center;
+ display: flex;
+ flex-wrap: wrap;
 }
 
 .aboutUs p{
@@ -266,6 +271,8 @@ border-radius:50%;
   display: flex;
   justify-content: space-between;
 }
+
+/*--------- AUTHOR DETAILS-----------*/
 .carticasAuthor{
  background-color:rgba(255, 255, 255, 0.575);
  padding: 20px;

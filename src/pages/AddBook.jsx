@@ -180,7 +180,7 @@ function AddBook() {
             </Form.Select>
           </FloatingLabel>  
       
-          <button type="submit">Add Book 📚</button>
+          <button className='btn-authorD' type="submit">Add Book 📚</button>
         </form>
       </div>
     );
