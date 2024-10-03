@@ -4,7 +4,7 @@ function Footer() {
   return (
     <div className="footer">
         <footer>
-            Gracias por ver la pagina
+            Bookdragon's Bookshelves
         </footer>
     </div>
   )

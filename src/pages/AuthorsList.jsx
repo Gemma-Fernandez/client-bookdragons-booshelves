@@ -19,8 +19,8 @@ function AuthorsList() {
   }, [])
   
   return (
-    <div>
-      <ul>
+    <div className="authorList-container">
+      
         {allAuthors.map((eachAuthor) => {
           return (
             <>
@@ -28,7 +28,7 @@ function AuthorsList() {
             </>
           )
         })}
-      </ul>
+      
 
 
     </div>

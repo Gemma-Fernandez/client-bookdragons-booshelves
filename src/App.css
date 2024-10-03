@@ -1,29 +1,61 @@
 @import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+
 
 #root {
   max-width: 100vw;
   margin: 0 auto;
-  background-color: lightgray;
+  background: #EADDCA;
+  background: -moz-linear-gradient(top, #EADDCA 0%, #BF5E3B 76%, #763433 100%);
+  background: -webkit-linear-gradient(top, #EADDCA 0%, #BF5E3B 76%, #763433 100%);
+  background: linear-gradient(to bottom, #EADDCA 0%, #BF5E3B 76%, #763433 100%);
   text-align: justify;
   min-height: 100vh;
   font-family: "Handlee", cursive;
 }
 
-.logo {
-  height: 150px;
-}
 
 .logo:hover {
   filter: drop-shadow(0 0 2em #c46732d3);
 }
 
+
+/*------ NAVBAR -----------------------------*/
 .custom-navbar{
-  background-color: rgb(82, 24, 24);
+
   padding: 10px;
+  display: flex;
+  align-items: center;
+  align-content: space-between;
+  
 }
 
-.navbar-form{
-  background-color:  rgb(131, 82, 82);
+    /*---- movile ----*/
+@media (max-width: 400px){
+  .logo {
+    width: 50px;
+  }
+  .container{
+    border: 5px solid black;
+    
+  }
+  .navbar-form{
+    margin-right: 4px ;
+  } 
+}
+#basic-navbar-nav{
+  text-align: center;
+}
+
+#enlacesNav:hover{
+color: #A84F3C;
+font-size: 18px;
+}
+
+
+/*------- BOOKLIST -------------------------*/
+.logo{
+  width: 200px;
 }
 
 .card {
@@ -34,37 +66,95 @@
   color: #888;
 }
 
+
+
 .bookList-container{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  padding: 20px;
 }
 
 
 .bookCard-container{
-  background-color:  rgb(131, 82, 82);
   margin: 5px;
   width: 250px;
   border-radius: 20px;
   padding: 10px;
   text-align: center;
   gap: 5px;
-  color: white
+  color: white;
+  transition: 0.4s;
+  height: 525px;
 }
 
 .bookCard-container a{
   text-decoration: none;
   color: white;
+  padding: 5px;
 }
 
-.bookCard-container a:hover{
-  text-decoration: underline;
+.bookCard-container:hover{
+  box-shadow: 5px 5px 15px 5px #00000095; 
 }
+
+.bookCard-cover img{
+  box-shadow: 5px 5px 15px 5px #00000095; 
+  border-radius: 20px;
+  margin-top: 5px;
+}
+
+.bookCard-info{
+  margin-top: 25px;
+  margin-bottom: 0px;
+}
+
+.bookCard-info h5{
+  font-size: 1.5rem;
+}
+
+.bookCard-info p span{
+  color: black
+}
+
+.authorList-container{
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.authorCard-container{
+  margin: 8px;
+  width: 250px;
+  border-radius: 20px;
+  padding: 15px;
+  text-align: center;
+  gap: 5px;
+  transition: 0.4s;
+}
+.authorCard-container a{
+  text-decoration: none;
+}
+.authorCard-container:hover{
+  box-shadow: 5px 5px 15px 5px #00000095;
+}
+.authorImg{
+  border-radius: 10px;
+  margin: 7px;
+  box-shadow: 5px 5px 15px 5px #00000075;
+  
+}
+.authorCard-info {
+  padding-top:10px;
+  color:white;
+}
+
 
 .footer{
   display:flex;
   position: relative;
   justify-content: flex-end;
   top: 230px;
+  font-family:"Fredericka the Great", system-ui
 }
