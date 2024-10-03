@@ -23,8 +23,9 @@ function BookDetails() {
 
   const getData= async ()=> {
     try {
-      const response = await axios.get(`${import.meta.env.VITE_SERVER_URL}/books/${params.bookId}`)
+      const response = await axios.get(`${import.meta.env.VITE_SERVER_URL}/books/${params.bookId}?_expand=author`)
       setBookToShow(response.data)
+      console.log("response.data", response.data)
     } catch (error) {
       console.log(error)
     }
@@ -61,8 +62,8 @@ function BookDetails() {
     <div className="book-details">
       <h2>{bookToShow.title}</h2>
       <img src={bookToShow.image} style={{width:"200px"}}/>
-      <Link to={`/authors/${bookToShow.authorId}`}>
-      <p>Author: {bookToShow.author}</p>
+      <Link to={`/authors/${bookToShow.author.id}`}>
+      <p>Author: {bookToShow.author.fullName}</p>
       </Link>
       <p>"{bookToShow.summary}"</p>
       <p>Pages: {bookToShow.pages}</p>

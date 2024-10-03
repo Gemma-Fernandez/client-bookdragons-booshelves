@@ -17,6 +17,7 @@
 
 .logo:hover {
   filter: drop-shadow(0 0 2em #c46732d3);
+  transition: 0.5s;
 }
 
 
@@ -34,6 +35,7 @@
 @media (max-width: 400px){
   .logo {
     width: 50px;
+
   }
   .container{
     border: 5px solid black;
@@ -43,6 +45,7 @@
     margin-right: 4px ;
   } 
 }
+
 #basic-navbar-nav{
   text-align: center;
 }
@@ -50,13 +53,15 @@
 #enlacesNav:hover{
 color: #A84F3C;
 font-size: 18px;
+filter: drop-shadow(0 0 2em #c46732d3);
+transition: 0.5s;
 }
 
 
 /*------- BOOKLIST -------------------------*/
-.logo{
-  width: 200px;
-}
+/* .logo{
+/*   width: 200px;
+} */ */
 
 .card {
   padding: 2em;
@@ -86,7 +91,7 @@ font-size: 18px;
   gap: 5px;
   color: white;
   transition: 0.4s;
-  height: 525px;
+  height: 520px;
 }
 
 .bookCard-container a{
@@ -132,6 +137,8 @@ font-size: 18px;
   text-align: center;
   gap: 5px;
   transition: 0.4s;
+  height: 405px;
+  
 }
 .authorCard-container a{
   text-decoration: none;
@@ -143,8 +150,12 @@ font-size: 18px;
   border-radius: 10px;
   margin: 7px;
   box-shadow: 5px 5px 15px 5px #00000075;
+  width: 150px;
+  height: 200px;
+  object-fit: cover;
   
 }
+
 .authorCard-info {
   padding-top:10px;
   color:white;

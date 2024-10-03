@@ -13,7 +13,7 @@ function BookCard(props) {
 
         <div className="bookCard-info">
           <h5>{props.title}</h5>
-          <p>Author: {props.author}</p>
+          <p>Author:{props.author}</p>
           <p>Genre: {props.genre}</p>
         </div>
          </Link>
