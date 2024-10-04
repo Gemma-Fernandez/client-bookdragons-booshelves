@@ -65,7 +65,7 @@ function BookDetails() {
 
         <div className='book-info-text'>
           <h2>{bookToShow.title}</h2>
-          <Link to={`/authors/${bookToShow.author.id}`}>
+          <Link to={`/authors/${bookToShow.authorId}`}>
           <p>Author: {bookToShow.author.fullName}</p>
           </Link>
           <p>Pages: {bookToShow.pages}</p>
