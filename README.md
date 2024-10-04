@@ -1,8 +1,8 @@
 # BookDragon's Bookshelves
+<img src="./src/images/dragon.png" alt="logo" width="20px" height="auto">
 
-## [See the App!](www.your-deploy-url-here.com)
+## [See the App!](https://bookdragons-bookshelves.netlify.app/)
 
-![App Logo](./src/images/dragon.png)
 
 ## Description
 
@@ -60,7 +60,6 @@
 | `/books/:bookid/editBook`     | EditBook          | EditForm            | Form to edit a specific book                                                |
 | `/reviews`                    | AddReview         |                     | Form to add a new review for a specific book                                       |
 | `/authors/:bookId/editAuthor` | EditAuthor        | EditForm            | Form to edit author content                         
-author
 | `/not-found`                  | NotFound          |                     | 404 Page for non-existent routes                                              |
 
 ## Other Components
