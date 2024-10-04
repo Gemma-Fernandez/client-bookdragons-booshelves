@@ -51,7 +51,6 @@ function AddBook() {
       published: Number(published),
       genre,
       rating: Number(rating),
-      isASerie,
     };
     
     const newAuthor ={
