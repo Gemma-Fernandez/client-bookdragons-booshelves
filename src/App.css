@@ -199,6 +199,9 @@ border-radius:50%;
   font-size: 1.5rem;
 }
 
+
+/*------- AUTHORS ------------*/
+
 .authorList-container{
   display:flex;
   flex-direction: row;
@@ -237,13 +240,7 @@ border-radius:50%;
   color:white;
 }
 
-.footer{
-  display:flex;
-  position: relative;
-  justify-content: flex-end;
-  top: 230px;
-  font-family:"Fredericka the Great", system-ui
-}
+
 
 
 /*----- ABOUT US -------------*/
@@ -375,11 +372,12 @@ border-radius:50%;
 .book-info-text{
   display: flex;
   flex-direction: column;
+  justify-content: center;
   padding: 20px;
   background-color:rgba(255, 255, 255, 0.575);
   border-radius: 20px;
   color: rgb(117, 117, 117);
-  ;
+  text-align: center;
 }
 
 .book-summary{
@@ -407,7 +405,19 @@ border-radius:50%;
   text-align: center;
 }
 
+/*------FOOTER-------*/
+.footer{
+  display:flex;
+  position: relative;
+  justify-content: flex-end;
+  font-family:"Fredericka the Great", system-ui;
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.459);
+  margin-right: 50px;
+  padding: 50px 0px 15px 0px;
+}
 
+/* ---------  MEDIA QUERIES ----------*/
 @media (width >450px){
   .intro{
     margin: 40px;
@@ -421,7 +431,10 @@ border-radius:50%;
   }
   
   .intro-carousel{
-    border: 5px solid black;
+    background-image: url("./images/dragon-back.png");
+    background-repeat: no-repeat;
+    background-size: 900px;
+    background-position: center;
   }
 
   .review{
@@ -432,7 +445,54 @@ border-radius:50%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
+    gap: 5px;
+  }
+  
+  .aboutUs-center{
+    padding:10px;
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+  }
+
+  .aboutUs{
+    width: 500px
+  } 
+
+  .book-info img{
+    width: 250px !important;
+  }
+
+  .book-summary{
+    margin:10px 50px 10px 50px;
+  }
+
+  .carticasAuthor{
+    margin:10px 50px 10px 50px
+  }
+
+  .authorDes{
+    padding:10px 30px 10px 30px;
+  }
+
+  .authorInfo{
+    background-image: url("./images/dragon-back.png");
+    background-repeat: no-repeat;
+    background-size: 600px;
+    background-position: center;
+  }
+
+  .logo{
+   width: 100px;
+  }
+  
+  .navbar-form{
+    margin:0px 30px 0px 30px
+  }
+
+  .footer{
+    font-size: 25px;
   }
 
 }

@@ -79,7 +79,7 @@ function BookDetails() {
       <div className='book-summary'>
         <p>"{bookToShow.summary}"</p>
      </div>
-      {/*<p>Write your opinion: bla bla{bookToShow.review}</p>*/}
+      
     <div className="dosBtn">
       <Link to={`/books/${params.bookId}/editBook`}>
       <button className='btn-authorD'>Edit</button>

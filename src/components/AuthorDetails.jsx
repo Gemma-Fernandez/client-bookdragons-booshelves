@@ -33,9 +33,11 @@ function AuthorDetails() {
     <div >
       <h3>Author details</h3>
       <div className="carticasAuthor">
+        <div className="authorInfo">
         <h4>{authorToShow.fullName}</h4>
         <img src={authorToShow.image} style={{width:"200px"}}/>
         <p> {authorToShow.location}</p>
+        </div>
         <p className="authorDes">{authorToShow.description}</p>
         <h4>Books written by the author: </h4>
         <div className="imagesBA">
