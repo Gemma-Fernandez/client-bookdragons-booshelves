@@ -82,4 +82,4 @@
 
 ### Slides
 
-- [Slides Link](www.your-slides-url-here.com)
+- [Slides Link](https://docs.google.com/presentation/d/1eXAty8IN5bckDhSq4J5fIyImB5t4WJw90FDAqiTkndI/edit#slide=id.p)

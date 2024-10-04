@@ -20,7 +20,6 @@ function EditForm() {
   const [image, setImage] = useState("");
   const [summary, setSummary] = useState("");
   const [rating, setRating] = useState(0);
-  const [isASerie, setIsASerie] = useState(false);
 
   useEffect (()=>{
     axios.get(`${import.meta.env.VITE_SERVER_URL}/books/${params.bookId}`)
@@ -32,8 +31,7 @@ function EditForm() {
       setGenre(response.data.genre)
       setImage(response.data.image)
       setSummary(response.data.summary)
-      setRating(response.data.rating)
-      setIsASerie(response.data.serie)    
+      setRating(response.data.rating)    
     })
     .catch((error)=>{
       console.log(error)

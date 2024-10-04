@@ -20,7 +20,7 @@ function BookDetails() {
 
   const getData= async ()=> {
     try {
-      const response = await axios.get(`${import.meta.env.VITE_SERVER_URL}/books/${params.bookId}?_expand=author`)
+      const response = await axios.get(`${import.meta.env.VITE_SERVER_URL}/books/${params.bookId}?_expand=authorId`)
       setBookToShow(response.data)
       console.log("response.data", response.data)
     } catch (error) {
