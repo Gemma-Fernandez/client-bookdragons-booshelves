@@ -70,7 +70,7 @@ function AddReview() {
           />
       </FloatingLabel>
 
-      <FloatingLabel controlId="floatingTextarea" label="Pages" className="mb-3"> 
+      <FloatingLabel controlId="floatingTextarea" label="Total book pages" className="mb-3"> 
         <Form.Control
           placeholder="Pages"
           type="text"
@@ -79,7 +79,7 @@ function AddReview() {
           />
       </FloatingLabel>
 
-      <FloatingLabel controlId="floatingTextarea" label="Progress" className="mb-3"> 
+      <FloatingLabel controlId="floatingTextarea" label="How many pages have you read?" className="mb-3"> 
         <Form.Control
           placeholder="How many pages have you read?"
           type="text"
@@ -88,7 +88,7 @@ function AddReview() {
           />
       </FloatingLabel>
 
-      <FloatingLabel controlId="floatingTextarea" label="Comment" className="mb-3"> 
+      <FloatingLabel controlId="floatingTextarea" label="Leave a comment here!" className="mb-3"> 
           <Form.Control 
             as="textarea"
             type="text"

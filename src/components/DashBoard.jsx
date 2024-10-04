@@ -41,11 +41,14 @@ if (allBooks === null){
 
   return (
     <div>
+      <div className="intro-carousel">
+      <div className="intro-center">
       <section className="intro">
         <p>Welcome to a bookdragon's bookshelves!! 🐲 </p>
-        <p>Here you can find some of our favorite books and some that are on our TBR, but pleaese, be our guest and add more!!</p>
+        <p>Here you can find some of our favorite books and some that are on our TBR, but please, be our guest and add more!!</p>
         <p> Like every dragon, we like to hoard our treasures! 📚</p>
       </section>
+      </div>
 
         <h3>Five books with five stars</h3>
       <section className="carousel">
@@ -66,6 +69,7 @@ if (allBooks === null){
           })}
         </Carousel>  
       </section>
+      </div>
       <section className="dashboard-btns">
             <Link to={"/addBook"}>
               <button> Add a book 📖</button>
@@ -75,12 +79,14 @@ if (allBooks === null){
             </Link>
       </section>
           <h3>Reviews</h3>
+          <div className="review-center">
         {allReviews.map((eachReview)=>{
           return (
           <ReviewComponent allReviews={allReviews} {...eachReview}/>
-          )
-        })}  
+        )
+      })}  
 
+      </div >
       </div>
   )
 }

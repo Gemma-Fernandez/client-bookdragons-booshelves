@@ -17,6 +17,7 @@
 
 
     /*---- movile ----*/
+    
 .logo {
   width: 70px;
 }
@@ -247,28 +248,26 @@ border-radius:50%;
 
 /*----- ABOUT US -------------*/
 .aboutUs{
-  width: 550px;
+ 
  background-color:rgba(255, 255, 255, 0.575);
  padding: 20px;
- margin: 10px;
+ margin: 15px;
  border-radius: 20px;
  text-align: center;
- display: flex;
- flex-wrap: wrap;
 }
 
 .aboutUs p{
   text-align: justify;
 }
 
-.aboutUs img{
+.imgPicture{
   border-radius: 50%;
-  width: 275px;
-
+  width: 245px;
+  
 }
 
 .links{
-  display: flex;
+  display:flex;
   justify-content: space-between;
 }
 
@@ -406,4 +405,34 @@ border-radius:50%;
 .form{
   margin: 20px;
   text-align: center;
+}
+
+
+@media (width >450px){
+  .intro{
+    margin: 40px;
+    font-size: 1rem;
+    width: 380px;
+  }
+  
+  .intro-center{
+    display:flex;
+    justify-content: center;
+  }
+  
+  .intro-carousel{
+    border: 5px solid black;
+  }
+
+  .review{
+    width: 350px;
+  }
+  
+  .review-center{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
 }

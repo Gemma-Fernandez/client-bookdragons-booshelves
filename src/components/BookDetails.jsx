@@ -61,7 +61,7 @@ function BookDetails() {
 
       
       <div className='book-info'>
-        <img src={bookToShow.image} style={{width:"200px"}}/>
+        <img src={bookToShow.image} style={{width:"150px"}}/>
 
         <div className='book-info-text'>
           <h2>{bookToShow.title}</h2>

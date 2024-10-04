@@ -166,20 +166,7 @@ function AddBook() {
               <option value="5">⭐⭐⭐⭐⭐</option>
             </Form.Select>
           </FloatingLabel>
-
-          <FloatingLabel controlId="floatingSelect" label="Rating" className="mb-3">
-            <Form.Select
-            placeholder="No"
-            type="text"
-            value={isASerie}
-            onChange={(event) => setIsASerie(event.target.value)}
-            aria-label="Floating label select example">
-              <option>Is it a part of a serie?</option>
-              <option value="Yes">Yes!</option>
-              <option value="No">No</option>
-            </Form.Select>
-          </FloatingLabel>  
-      
+          
           <button className='btn-authorD' type="submit">Add Book 📚</button>
         </form>
       </div>
