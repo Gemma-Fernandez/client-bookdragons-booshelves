@@ -1,5 +1,5 @@
 # BookDragon's Bookshelves
-<img src="./src/images/dragon.png" alt="logo" width="20px" height="auto">
+<img src="./src/images/dragon.png" alt="logo" width="200px" height="auto">
 
 ## [See the App!](https://bookdragons-bookshelves.netlify.app/)
 
