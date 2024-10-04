@@ -83,7 +83,7 @@ function EditForm() {
         value={title}
         onChange={(event) => setTitle(event.target.value)}
         />
-        </FloatingLabel>
+        </FloatingLabel> 
 
         <FloatingLabel controlId="floatingTextarea" label="Author" className="mb-3">
       <Form.Control
